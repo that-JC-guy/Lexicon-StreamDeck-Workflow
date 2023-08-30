@@ -28,11 +28,11 @@ Setup Guide:
 2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
 3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
 4. Install Docker:
-	4a. Browse to [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
-	4b. Select the appropriate OS version (if it isn't automatically detected.)
-	4c. Save it to your computer. Note where you saved it.
-	4d. Double-click "Docker Decktop installer.exe" (for Windows) or "Docker.dmg" (for MacOS.)
-	4e. Accept the default setup options and install Docker Desktop.
+       4a. Browse to [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
+       4b. Select the appropriate OS version (if it isn't automatically detected.)
+       4c. Save it to your computer. Note where you saved it.
+       4d. Double-click "Docker Decktop installer.exe" (for Windows) or "Docker.dmg" (for MacOS.)
+       4e. Accept the default setup options and install Docker Desktop.
 5. Open a command prompt (Windows) or terminal (MacOS).
 6. Type the following:
 	"docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red"
