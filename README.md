@@ -59,13 +59,14 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 ### What have I done so far?
 You have done the 
 
-## Usage
-### Updating a hotcue color
+## Usage (Basic Workflow)
+### Updating a hotcue
 On the StreamDeck:
    - Press color key (e.g. orange)
+   - Press label key (e.g. Drop)
    - Press Update Hotcue #
    ```
-   To set hotcue 1 as orange -> Press "Orange", Press "Update Hotcue 1".
+   To set hotcue 1 as orange with a "Drop" label -> Press "Orange", Press "Drop", Press "Update Hotcue 1".
    ```
 >[!NOTE]
 >If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
