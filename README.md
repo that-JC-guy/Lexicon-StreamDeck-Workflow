@@ -41,8 +41,18 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 ```
    - This will download the Node-RED docker image, start it and setup the internal networking. 
 7. Test if Node-RED is working by opening a web browser to this address - "http://127.0.0.1:1880". If you see the Node-RED page, you are good to continue.
-8. 
-	
+8. Copy the contents one of the workflows (basic recommended at first):
+   - [./workflows/basic_workflow.json](./workflows/basic_workflow.json)
+   - [./workflows/advanced_workflow.json](./workflows/advanced_workflow.json)
+9. In your Node-RED Window, click the upper-right hamburger menu and select "Import".
+10. Paste the content of the workflow JSON file into the "Import nodes" window and then click the "Import" button.
+11. Double-click the "Lexicon Hotcue Workflow" tab to open its properties.
+12. In the properties, click the "Environment Variables" button.
+13. Change the "HOST_IP" value to your computer's local IP address and then click "Done".
+
+### What have I done so far?
+You have done the 
+
 
 
 >[!NOTE]
