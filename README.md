@@ -14,6 +14,7 @@ You do not need to know how to code to use this. All customization is handled in
 >- Installing software.
 >- Following directions. 
 
+### Windows or MacOS?
 To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here](https://nodered.org/docs/getting-started/windows). Just ignore the Docker installation instructions below and be sure you have a Node-RED instance running somewhere. 
 
 ### What you will need
