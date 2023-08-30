@@ -25,7 +25,7 @@ To simplify the process, the setup is basically the same for both Windows and Ma
 - Docker - This is the runtime environment for Node-RED. 
 
 ### Setup Guide
-1. Get your StreamDeck.
+1. Get your StreamDeck and install the StreamDeck software.
 2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
 3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
 4. Install Docker:
