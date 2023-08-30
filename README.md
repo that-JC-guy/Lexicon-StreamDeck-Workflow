@@ -67,7 +67,10 @@ On the StreamDeck:
    ```
    To set hotcue 1 as orange -> Press "Orange", Press "Update Hotcue 1".
    ```
-
+>[!NOTE]
+>If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
+>To check this, and "Invalid color sent" message will be in the Node-RED debug log along with a list of valid colors will be displayed.
+ 
 >[!NOTE]
 >Tips and tricks for managing your Node-RED docker instance can be found at [https://nodered.org/docs/getting-started/docker](https://nodered.org/docs/getting-started/docker)
 
