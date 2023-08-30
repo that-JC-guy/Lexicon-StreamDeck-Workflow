@@ -25,9 +25,13 @@ To simplify the process, the setup is basically the same for both Windows and Ma
 - Docker - This is the runtime environment for Node-RED. 
 
 ### Setup Guide
+#### Getting the StreamDeck Ready
 1. Get your StreamDeck and install the StreamDeck software.
 2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
 3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
+4. [***Import the StreamDeck profile***]
+
+#### Installing Node-RED
 4. Install Docker:
    - Browse to [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
    - Select the appropriate OS version (if it isn't automatically detected.)
@@ -41,6 +45,8 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 ```
    - This will download the Node-RED docker image, start it and setup the internal networking. 
 7. Test if Node-RED is working by opening a web browser to this address - "http://127.0.0.1:1880". If you see the Node-RED page, you are good to continue.
+
+##### Configuring Node-RED
 8. Copy the contents one of the workflows (basic recommended at first):
    - [./workflows/basic_workflow.json](./workflows/basic_workflow.json)
    - [./workflows/advanced_workflow.json](./workflows/advanced_workflow.json)
