@@ -45,13 +45,6 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 	
 
 
-
-
-
-
->[!NOTE]
->If you are using Docker to host your Node-RED instance, you will need to specify your computer's IP address in the "Lexicon Hotcue Workflow" tab.
-
 >[!NOTE]
 >Tips and tricks for managing your Node-RED docker instance can be found at [https://nodered.org/docs/getting-started/docker](https://nodered.org/docs/getting-started/docker)
 
