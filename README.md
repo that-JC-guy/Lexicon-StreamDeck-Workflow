@@ -19,9 +19,9 @@ What you will need:
 - Lexicon Plug-In for StreamDeck - This will get you control options to manipulate Lexicon from your StreamDeck.
 - WebSocket Proxy for StreamDeck - This is the interface from the StreamDeck to Node-RED. 
 - Node-RED - This handles managing inputs from the StreamDeck (read: button pushes) and create the proper message formatting to send to the Lexicon API.
-- Docker - This is the running environment for Node-RED. 
+- Docker - This is the runtime environment for Node-RED. 
 
-Basic Guide:
+Setup Guide:
 1. Get your StreamDeck.
 2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
 3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
