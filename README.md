@@ -7,6 +7,8 @@ Advanced Workflow Control Using Lexicon and a StreamDeck XL
 
 Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), I've been working on speeding up my initial track setup workflow using my StreamDeck XL. I  have reached a point where I'm able to add all of my cuepoints (with my labelling/coloring preferences) while scanning through the track without ever touch my keyboard or mouse. To do this I am using a combination of tools, including the the Lexicon Plug-In for StreamDeck and Node-RED for advanced workflow management and Lexicon API communication. Since I expect that others might have an interest in doing likewise, I am creating this how-to so we can work together to improve the speed and efficiency of our own particular preparation workflow.
 
+You do not need to know how to code to use this. All customization is handled in the StreamDeck. You can expand on the workflows to further customize it for you (an example of this can be seen in the "advanced_workflow.json" file.)
+
 To set this up, you need to be comfortable with doing the following:
 - Opening a command prompt/terminal window. 
 - Installing software.
