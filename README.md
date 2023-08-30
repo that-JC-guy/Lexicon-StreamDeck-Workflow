@@ -14,7 +14,7 @@ To set this up, you need to be comfortable with doing the following:
 - Installing software.
 - Following directions. 
 
-To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, but I am not covering local installations in this guide. Just ignore the Docker instructions and be sure you have a Node-RED instance running somewhere. 
+To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here]9https://nodered.org/docs/getting-started/windows). Just ignore the Docker installation instructions below and be sure you have a Node-RED instance running somewhere. 
 
 What you will need:
 - StreamDeck XL - [https://www.elgato.com/us/en/p/stream-deck-xl](https://www.elgato.com/us/en/p/stream-deck-xl) - You don't necessarily need the XL, it will work on smaller units, but it is really convenient and reduces page changes. 
