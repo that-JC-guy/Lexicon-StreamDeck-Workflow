@@ -59,7 +59,14 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 ### What have I done so far?
 You have done the 
 
-
+## Usage
+### Updating a hotcue color
+On the StreamDeck:
+   - Press color key (e.g. orange)
+   - Press Update Hotcue #
+   ```
+   To set hotcue 1 as orange -> Press "Orange", Press "Update Hotcue 1".
+   ```
 
 >[!NOTE]
 >Tips and tricks for managing your Node-RED docker instance can be found at [https://nodered.org/docs/getting-started/docker](https://nodered.org/docs/getting-started/docker)
