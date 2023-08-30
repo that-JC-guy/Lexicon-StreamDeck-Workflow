@@ -38,7 +38,7 @@ Setup Guide:
 ```
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 ```
-   This will download the Node-RED docker image, start it and setup the internal networking. 
+   - This will download the Node-RED docker image, start it and setup the internal networking. 
 7. Test if Node-RED is working by opening a web browser to this address - "http://127.0.0.1:1880". If you see the Node-RED page, you are good to continue.
 8. 
 	
