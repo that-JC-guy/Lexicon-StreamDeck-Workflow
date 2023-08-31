@@ -1,4 +1,4 @@
-## Enhanced Workflow Control Using Lexicon and a StreamDeck XL
+# Enhanced Workflow Control Using Lexicon and a StreamDeck XL
 
 Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), this project was created to improved the efficiency of initial track preparation workflow using a StreamDeck XL. Since there is much repetition in this process. this project enables you to set all hotcues preferences (with your labelling/coloring preferences) while scanning through the track and without ever nedding to touch your keyboard or mouse. 
 
@@ -14,17 +14,17 @@ If you are feeling adventurous, you can expand on the workflows to further custo
 >- Installing software.
 >- Following directions. 
 
-### Windows or MacOS?
+## Windows or MacOS?
 To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here](https://nodered.org/docs/getting-started/windows). Just ignore the "Installing Node-RED" installation instructions below and be sure you have a Node-RED instance running somewhere. 
 
-### What you will need
+## What you will need
 - StreamDeck XL - [https://www.elgato.com/us/en/p/stream-deck-xl](https://www.elgato.com/us/en/p/stream-deck-xl) - You don't necessarily need the XL, it will work on smaller units, but it is really convenient and reduces page changes. 
 - Lexicon Plug-In for StreamDeck - This will get you control options to manipulate Lexicon from your StreamDeck.
 - WebSocket Proxy for StreamDeck - This is the interface from the StreamDeck to Node-RED. 
 - Node-RED - This handles managing inputs from the StreamDeck (read: button pushes) and create the proper message formatting to send to the Lexicon API.
 - Docker - This is the runtime environment for Node-RED. 
 
-### Setup Guide
+## Setup Guide
 #### Getting the StreamDeck Ready
 1. Get your StreamDeck and install the StreamDeck software.
 3. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
@@ -36,7 +36,7 @@ To simplify the process, the setup is basically the same for both Windows and Ma
 7. Import the StreamDeck profile you downloaded by clicking the gear icon go to the "Profiles" tab, click the down arrow under the list of profiles and select "Import..."
 8. Browse to the StreamDeck profile you downloaded and click "Open"
 
-#### Installing Node-RED
+### Installing Node-RED
 4. Install Docker:
    - Browse to [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
    - Select the appropriate OS version (if it isn't automatically detected.)
@@ -53,7 +53,7 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 >[!NOTE]
 >Tips and tricks for managing your Node-RED docker instance can be found at [https://nodered.org/docs/getting-started/docker](https://nodered.org/docs/getting-started/docker)
 
-#### Configuring Node-RED
+### Configuring Node-RED
 8. Copy the contents one of the workflows (basic recommended at first):
    - [./workflows/basic/basic_nr_workflow.json](./workflows/basic/basic_nr_workflow.json)
    - [./workflows/advanced/advanced_nr_workflow.json](./workflows/advanced/advanced_nr_workflow.json)
@@ -75,7 +75,7 @@ The first page of the StreamDeck profile sets and removes hotcues and controls s
 
 The second page of the StreamDeck profile updates the hotcues once set. It will not update a hotcue that doesn't already exist. Again, You can control the player from the bottom row of buttons. 
 
-## Usage
+## Basic Usage
 ### Setting a hotcue
 With the song you want to update loaded into the Lexicon player and playing, when you reach a point where you want to set a hotcue, simply click the "Hotcue #" button within one-half beat of the point you want it set. Once set, this will also allow you to jump to that hotcue as well.
 
