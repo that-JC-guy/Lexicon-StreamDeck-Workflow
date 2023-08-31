@@ -6,7 +6,7 @@ A combination of tools are used to accomplish this, including the the Lexicon Pl
 
 You do not need to know how to code to use this. All hotcue customization (naming/coloring) is handled in the StreamDeck. 
 
-If you are feeling adventurous, you can expand on the workflows to further customize it for your own needs (an example of this can be seen in the "advanced_workflow.json" file, which requires some knowledge of Node-RED, Javascript, and message flow.)
+If you are feeling adventurous, you can expand on the workflows to further customize it for your own needs (an example of this can be seen in the "advanced_workflow.json" file, and which requires some knowledge of Node-RED, Javascript, and message flow.)
 
 >[!IMPORTANT]
 >To set this up, you need to be comfortable with doing the following:
