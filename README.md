@@ -71,6 +71,9 @@ defines how Lexicon names the hotcue.
 
 Similarly, the colors work the same, but the id of colors should be entered all lower-case.
 
+>[!IMPORTANT]
+>The StreamDeck app has a bug in it where if a value is changed and you don't click into another field, it may not save properly. So after making a change, click into another field before moving out of the button you modified.
+
 The first page of the StreamDeck profile sets and removes hotcues and controls some player functions (play/pause, skip forward/backward, etc.) You can also skip around the song using the "<1 M", "> 1M","< 16M", and "> 16M" buttons, moving 1 measure and 16 measure respectively. 
 
 The second page of the StreamDeck profile updates the hotcues once set. It will not update a hotcue that doesn't already exist. Again, You can control the player from the bottom row of buttons. 
