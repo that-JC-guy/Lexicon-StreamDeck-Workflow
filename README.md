@@ -6,9 +6,14 @@ This repo contains the configuration files and instructions to setup enhanced wo
 
 ## Enhanced Workflow Control Using Lexicon and a StreamDeck XL
 
-Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), I've been working on speeding up my initial track setup workflow using my StreamDeck XL. I  have reached a point where I'm able to add all of my cuepoints (with my labelling/coloring preferences) while scanning through the track without ever touch my keyboard or mouse. To do this I am using a combination of tools, including the the Lexicon Plug-In for StreamDeck and Node-RED for advanced workflow management and Lexicon API communication. Since I expect that others might have an interest in doing likewise, I am creating this how-to so we can work together to improve the speed and efficiency of our own particular preparation workflow.
+Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), this project was created to improved the efficiency of initial track preparation workflow using a StreamDeck XL. This project enables you to set all hotcues preferences (with your labelling/coloring preferences) while scanning through the track without ever touch your keyboard or mouse. 
 
-You do not need to know how to code to use this. All customization is handled in the StreamDeck. You can expand on the workflows to further customize it for you (an example of this can be seen in the "advanced_workflow.json" file.)
+A combination of tools are used to accomplish this, including the the Lexicon Plug-In for StreamDeck, the WebSocket Proxy for StreamDeck, and Node-RED for advanced workflow management and Lexicon API communication. 
+
+You do not need to know how to code to use this. All hotcue customization (naming/coloring) is handled in the StreamDeck. 
+
+If you are feeling adventurous, you can expand on the workflows to further customize it for your own needs (an example of this can be seen in the "advanced_workflow.json" file, which requires some knowledge of Node-RED, Javascript, and message flow.)
+
 >[!IMPORTANT]
 >To set this up, you need to be comfortable with doing the following:
 >- Opening a command prompt/terminal window. 
@@ -16,7 +21,7 @@ You do not need to know how to code to use this. All customization is handled in
 >- Following directions. 
 
 ### Windows or MacOS?
-To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here](https://nodered.org/docs/getting-started/windows). Just ignore the Docker installation instructions below and be sure you have a Node-RED instance running somewhere. 
+To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here](https://nodered.org/docs/getting-started/windows). Just ignore the "Installing Node-RED" installation instructions below and be sure you have a Node-RED instance running somewhere. 
 
 ### What you will need
 - StreamDeck XL - [https://www.elgato.com/us/en/p/stream-deck-xl](https://www.elgato.com/us/en/p/stream-deck-xl) - You don't necessarily need the XL, it will work on smaller units, but it is really convenient and reduces page changes. 
