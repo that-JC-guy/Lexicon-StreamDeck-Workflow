@@ -31,8 +31,8 @@ To simplify the process, the setup is basically the same for both Windows and Ma
 2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
 3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
 4. Download the StreamDeck profile  from the links below (recommend starting with Basic):
-   - Basic - [Lexicon Basic Workflow.streamDeckProfile](./workflows/basic/Lexicon Basic Workflow.streamDeckProfile)
-   - Advanced - [Lexicon Advanced Workflow.streamDeckProfile](./workflows/advanced/Lexicon Advanced Workflow.streamDeckProfile)
+   - [Lexicon Basic Workflow.streamDeckProfile](./workflows/basic/Lexicon Basic Workflow.streamDeckProfile)
+   - [Lexicon Advanced Workflow.streamDeckProfile](./workflows/advanced/Lexicon Advanced Workflow.streamDeckProfile)
 5. Import the StreamDeck profile you downloaded by clicking the gear icon go to the "Profiles" tab, click the down arrow under the list of profiles and select "Import..."
 6. Browse to the StreamDeck profile you downloaded and click "Open"
 
