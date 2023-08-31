@@ -27,13 +27,14 @@ To simplify the process, the setup is basically the same for both Windows and Ma
 ### Setup Guide
 #### Getting the StreamDeck Ready
 1. Get your StreamDeck and install the StreamDeck software.
-2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
-3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
-4. Download the StreamDeck profile  from the links below (recommend starting with Basic):
+3. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
+4. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
+5. The profiles listed below use the "Neon Grid" icon library. To install the Neon grid icon libray, follow the instructions [here](https://help.elgato.com/hc/en-us/articles/4402426848013-Elgato-Stream-Deck-Using-Icon-packs).
+6. Download the StreamDeck profile  from the links below (recommend starting with Basic):
    - [Lexicon Basic Workflow.streamDeckProfile](./workflows/basic/Lexicon%20Basic%20Workflow.streamDeckProfile)
    - [Lexicon Advanced Workflow.streamDeckProfile](./workflows/advanced/Lexicon%20Advanced%20Workflow.streamDeckProfile)
-5. Import the StreamDeck profile you downloaded by clicking the gear icon go to the "Profiles" tab, click the down arrow under the list of profiles and select "Import..."
-6. Browse to the StreamDeck profile you downloaded and click "Open"
+7. Import the StreamDeck profile you downloaded by clicking the gear icon go to the "Profiles" tab, click the down arrow under the list of profiles and select "Import..."
+8. Browse to the StreamDeck profile you downloaded and click "Open"
 
 #### Installing Node-RED
 4. Install Docker:
