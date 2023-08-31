@@ -1,10 +1,10 @@
-# Lexicon StreamDeck Workflow Enhancement
+a# Lexicon StreamDeck Workflow Enhancement
 
 This repo contains the configuration files and instructions to setup enhanced workflows for Lexicon and StreamDeck integration.
 
 [WORK IN PROGRESS, DO NOT USE YET]
 
-## Advanced Workflow Control Using Lexicon and a StreamDeck XL
+## Enhanced Workflow Control Using Lexicon and a StreamDeck XL
 
 Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), I've been working on speeding up my initial track setup workflow using my StreamDeck XL. I  have reached a point where I'm able to add all of my cuepoints (with my labelling/coloring preferences) while scanning through the track without ever touch my keyboard or mouse. To do this I am using a combination of tools, including the the Lexicon Plug-In for StreamDeck and Node-RED for advanced workflow management and Lexicon API communication. Since I expect that others might have an interest in doing likewise, I am creating this how-to so we can work together to improve the speed and efficiency of our own particular preparation workflow.
 
