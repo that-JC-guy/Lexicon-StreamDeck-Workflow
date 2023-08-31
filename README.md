@@ -73,7 +73,7 @@ Similarly, the colors work the same, but the id of colors should be entered all 
 
 The first page of the StreamDeck profile sets and removes hotcues and controls some player functions (play/pause, skip forward/backward, etc.) You can also skip around the song using the "<1 M", "> 1M","< 16M", and "> 16M" buttons, moving 1 measure and 16 measure respectively. 
 
-The second page of the StreamDeck profile updates the hotcues once set. It will not update a hotcue that doesn't already exist. 
+The second page of the StreamDeck profile updates the hotcues once set. It will not update a hotcue that doesn't already exist. Again, You can control the player from the bottom row of buttons. 
 
 ## Usage
 ### Setting a hotcue
