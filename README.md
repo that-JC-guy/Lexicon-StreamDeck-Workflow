@@ -1,5 +1,6 @@
-# Lexicon-StreamDeck-Workflow
-This repo contains the configuration files and instructions to setup advanced workflows for Lexicon and StreamDeck integration
+# Lexicon StreamDeck Workflow Enhgancement
+
+This repo contains the configuration files and instructions to setup enhanced workflows for Lexicon and StreamDeck integration.
 
 [WORK IN PROGRESS, DO NOT USE YET]
 
