@@ -1,6 +1,6 @@
 ## Enhanced Workflow Control Using Lexicon and a StreamDeck XL
 
-Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), this project was created to improved the efficiency of initial track preparation workflow using a StreamDeck XL. This project enables you to set all hotcues preferences (with your labelling/coloring preferences) while scanning through the track without ever touch your keyboard or mouse. 
+Starting from Christian's Lexicon blog post [Controlling Lexicon from your Stream Deck](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54), this project was created to improved the efficiency of initial track preparation workflow using a StreamDeck XL. Since there is much repetition in this process. this project enables you to set all hotcues preferences (with your labelling/coloring preferences) while scanning through the track and without ever nedding to touch your keyboard or mouse. 
 
 A combination of tools are used to accomplish this, including the the Lexicon Plug-In for StreamDeck, the WebSocket Proxy for StreamDeck, and Node-RED for advanced workflow management and Lexicon API communication. 
 
