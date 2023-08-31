@@ -1,0 +1,1133 @@
+[
+    {
+        "id": "f2447a8362bce5f7",
+        "type": "tab",
+        "label": "Lexicon Basic Workflow",
+        "disabled": false,
+        "info": "",
+        "env": [
+            {
+                "name": "HOST_IP",
+                "value": "10.0.0.235",
+                "type": "str"
+            }
+        ]
+    },
+    {
+        "id": "eef2df2d56d7dae8",
+        "type": "group",
+        "z": "f2447a8362bce5f7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "45e247d16e8a5f58",
+            "58f1a599266bc33c",
+            "160dfbd4eeceac39",
+            "cb99d7b4f9bd7a70",
+            "1d45ae44d970f266",
+            "964484de67fcaab3",
+            "d05b0a9662e40303",
+            "1e710b449cdfd406",
+            "f4de24a6fd5c9169",
+            "608b61f65fd9bd71",
+            "082518403f356fa0",
+            "efbe320696384cd4",
+            "e50ff357c527b7db",
+            "d86dc52c78f5f35e",
+            "cdf671655dffb8a1",
+            "0fc61ed6b142b99f"
+        ],
+        "x": 54,
+        "y": 19,
+        "w": 1492,
+        "h": 202
+    },
+    {
+        "id": "36dd16c312c439fd",
+        "type": "group",
+        "z": "f2447a8362bce5f7",
+        "name": "Get Playing Track & Requested Hotcue",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "682ae6c4343d2733",
+            "e07a927cb942d57b",
+            "7ea8beb3e86e2276",
+            "47cb48ae57c8b2b8",
+            "ec31a5275082589f"
+        ],
+        "x": 254,
+        "y": 399,
+        "w": 992,
+        "h": 82
+    },
+    {
+        "id": "615ae58b34e19094",
+        "type": "group",
+        "z": "f2447a8362bce5f7",
+        "name": "Get Track Info from DB",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7452215585970bb0",
+            "812d12d78f61adbd",
+            "e0616f35cb6326e4"
+        ],
+        "x": 1274,
+        "y": 399,
+        "w": 652,
+        "h": 82
+    },
+    {
+        "id": "6f770e2ef7d63043",
+        "type": "group",
+        "z": "f2447a8362bce5f7",
+        "name": "Create Edit Request & Execute",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d0be95a753d444ef",
+            "97aabcff572984a5",
+            "b1c66761f24ced2e",
+            "16ef8c2421684707"
+        ],
+        "x": 1954,
+        "y": 399,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "f12a49de3899a13e",
+        "type": "websocket in",
+        "z": "f2447a8362bce5f7",
+        "name": "",
+        "server": "b33717f94a7746f9",
+        "client": "",
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "682ae6c4343d2733"
+            ]
+        ]
+    },
+    {
+        "id": "0f380cfc4b6855be",
+        "type": "websocket out",
+        "z": "f2447a8362bce5f7",
+        "name": "",
+        "server": "b33717f94a7746f9",
+        "client": "",
+        "x": 2890,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "885bf983ba771ce7",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "URL For PATCH",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2660,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "de79dda072645a3b",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "PATCH Call",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2890,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "619147f7f74cd9d8",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "Result",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2410,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ecead3c249c7e571",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "Incoming Request",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0aad7cdc09d4fb45",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "Original Track Info",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1850,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "452ba1560c0b1396",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "Full Hotcue Update",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2570,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2ded4830c1df79de",
+        "type": "switch",
+        "z": "f2447a8362bce5f7",
+        "name": "Check If Hotcue Exists",
+        "property": "context.hotcue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1240,
+        "y": 580,
+        "wires": [
+            [
+                "4277bb94a350a479",
+                "9fa00aec208de739"
+            ]
+        ]
+    },
+    {
+        "id": "4277bb94a350a479",
+        "type": "file in",
+        "z": "f2447a8362bce5f7",
+        "name": "Retrieve Name",
+        "filename": "/tmp/hotcue/name.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1480,
+        "y": 600,
+        "wires": [
+            [
+                "f66a4ed14e2f3a20",
+                "4c5b2fcf53ba302a"
+            ]
+        ]
+    },
+    {
+        "id": "ce1f39f912af1333",
+        "type": "change",
+        "z": "f2447a8362bce5f7",
+        "name": "Set Color",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "color",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 560,
+        "wires": [
+            [
+                "a67163b792717784",
+                "cbac6126cf078903"
+            ]
+        ]
+    },
+    {
+        "id": "a67163b792717784",
+        "type": "join",
+        "z": "f2447a8362bce5f7",
+        "name": "Combine New Attributes",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "0.5",
+        "count": "0",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 2010,
+        "y": 580,
+        "wires": [
+            [
+                "84a51189f4727157",
+                "4365d4225859a5f3"
+            ]
+        ]
+    },
+    {
+        "id": "f66a4ed14e2f3a20",
+        "type": "change",
+        "z": "f2447a8362bce5f7",
+        "name": "Set Name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "name",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 600,
+        "wires": [
+            [
+                "a67163b792717784",
+                "cbac6126cf078903"
+            ]
+        ]
+    },
+    {
+        "id": "84a51189f4727157",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "name": "Create Hotcue Name",
+        "func": "msg.context.hotcue.name = msg.payload.name\nmsg.context.hotcue.color = msg.payload.color\n\nmsg.payload = msg.context.hotcue\nmsg.topic = \"hotcue\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2260,
+        "y": 580,
+        "wires": [
+            [
+                "d0be95a753d444ef",
+                "452ba1560c0b1396"
+            ]
+        ]
+    },
+    {
+        "id": "c667f59ed48f5d6d",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "Hotcue Info",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "context.hotcue",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f2522183370ce44c",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "name": "Get Hotcue Pos In Array",
+        "func": "for (let index = 0; index < msg.payload.data.track.cuepoints.length; index++) {\n    if (msg.payload.data.track.cuepoints[index].position == msg.context.hotcue.number){\n        msg.context.hotcue = msg.payload.data.track.cuepoints[index]\n        break\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 580,
+        "wires": [
+            [
+                "2ded4830c1df79de",
+                "c667f59ed48f5d6d"
+            ]
+        ]
+    },
+    {
+        "id": "9fa00aec208de739",
+        "type": "file in",
+        "z": "f2447a8362bce5f7",
+        "name": "Retrieve Color",
+        "filename": "/tmp/hotcue/color.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1480,
+        "y": 560,
+        "wires": [
+            [
+                "ce1f39f912af1333",
+                "4c5b2fcf53ba302a"
+            ]
+        ]
+    },
+    {
+        "id": "45e247d16e8a5f58",
+        "type": "websocket in",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "",
+        "server": "95d276e44bdb1ff4",
+        "client": "",
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "58f1a599266bc33c"
+            ]
+        ]
+    },
+    {
+        "id": "58f1a599266bc33c",
+        "type": "sd-input",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Stream Deck In",
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "160dfbd4eeceac39"
+            ]
+        ]
+    },
+    {
+        "id": "160dfbd4eeceac39",
+        "type": "switch",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Key Down",
+        "property": "payload.event",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "keyDown",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "1d45ae44d970f266"
+            ]
+        ]
+    },
+    {
+        "id": "cb99d7b4f9bd7a70",
+        "type": "file",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Save Color",
+        "filename": "/tmp/hotcue/color.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1250,
+        "y": 60,
+        "wires": [
+            [
+                "e50ff357c527b7db"
+            ]
+        ]
+    },
+    {
+        "id": "1d45ae44d970f266",
+        "type": "change",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Get Color",
+        "rules": [
+            {
+                "t": "set",
+                "p": "context.color",
+                "pt": "msg",
+                "to": "payload.payload.settings.id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 60,
+        "wires": [
+            [
+                "964484de67fcaab3"
+            ]
+        ]
+    },
+    {
+        "id": "964484de67fcaab3",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Create Color Object",
+        "func": "var newMsg = {payload: msg.context.color}\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 60,
+        "wires": [
+            [
+                "cdf671655dffb8a1",
+                "0fc61ed6b142b99f"
+            ]
+        ]
+    },
+    {
+        "id": "d05b0a9662e40303",
+        "type": "file",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Save Name",
+        "filename": "/tmp/hotcue/name.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1250,
+        "y": 120,
+        "wires": [
+            [
+                "d86dc52c78f5f35e"
+            ]
+        ]
+    },
+    {
+        "id": "1e710b449cdfd406",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Create Name Object",
+        "func": "var newMsg = {payload: msg.context.name}\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 120,
+        "wires": [
+            [
+                "d05b0a9662e40303",
+                "cdf671655dffb8a1"
+            ]
+        ]
+    },
+    {
+        "id": "f4de24a6fd5c9169",
+        "type": "change",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "GetName",
+        "rules": [
+            {
+                "t": "set",
+                "p": "context.name",
+                "pt": "msg",
+                "to": "payload.payload.settings.id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "1e710b449cdfd406"
+            ]
+        ]
+    },
+    {
+        "id": "608b61f65fd9bd71",
+        "type": "switch",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Key Down",
+        "property": "payload.event",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "keyDown",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "f4de24a6fd5c9169"
+            ]
+        ]
+    },
+    {
+        "id": "082518403f356fa0",
+        "type": "sd-input",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Stream Deck In",
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "608b61f65fd9bd71"
+            ]
+        ]
+    },
+    {
+        "id": "efbe320696384cd4",
+        "type": "websocket in",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "",
+        "server": "aeb48c1990118d6a",
+        "client": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "082518403f356fa0"
+            ]
+        ]
+    },
+    {
+        "id": "e50ff357c527b7db",
+        "type": "websocket out",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "",
+        "server": "95d276e44bdb1ff4",
+        "client": "",
+        "x": 1430,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d86dc52c78f5f35e",
+        "type": "websocket out",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "",
+        "server": "aeb48c1990118d6a",
+        "client": "",
+        "x": 1430,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cdf671655dffb8a1",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Hotcue Atrributes",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0fc61ed6b142b99f",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "eef2df2d56d7dae8",
+        "name": "Color Check",
+        "func": "var validColors = [\n    \"red_dark\", \"red\", \"red_light\", \"red_orange\",\n    \"orange\", \"beige\", \"yellow_dark\", \"yellow\",\n    \"lime\", \"green_light\", \"green\", \"green_dark\",\n    \"teal\", \"aqua\", \"aqua_dark\", \"blue_light\",\n    \"blue\", \"blue_dark\", \"blue_violet\", \"violet\",\n    \"violet_light\", \"magenta\", \"magenta_dark\",\n    \"magenta_red\", \"grey_light\", \"grey_dark\",\n    \"black\", \"white\"\n    ]\n\nvar valid = validColors.includes(msg.payload)\n\nif (valid == false) {\n    msg.payload = \"black\"\n    var colors = validColors.join(\", \");\n    node.warn('Invalid color sent. Valid colors: ' + colors)\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 60,
+        "wires": [
+            [
+                "cb99d7b4f9bd7a70"
+            ]
+        ]
+    },
+    {
+        "id": "682ae6c4343d2733",
+        "type": "sd-input",
+        "z": "f2447a8362bce5f7",
+        "g": "36dd16c312c439fd",
+        "name": "Stream Deck In",
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "e07a927cb942d57b"
+            ]
+        ]
+    },
+    {
+        "id": "e07a927cb942d57b",
+        "type": "switch",
+        "z": "f2447a8362bce5f7",
+        "g": "36dd16c312c439fd",
+        "name": "Key Down",
+        "property": "payload.event",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "keyDown",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "7ea8beb3e86e2276",
+                "ecead3c249c7e571"
+            ]
+        ]
+    },
+    {
+        "id": "7ea8beb3e86e2276",
+        "type": "change",
+        "z": "f2447a8362bce5f7",
+        "g": "36dd16c312c439fd",
+        "name": "Get Hotcue #",
+        "rules": [
+            {
+                "t": "set",
+                "p": "context.hotcue.number",
+                "pt": "msg",
+                "to": "payload.payload.settings.id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 440,
+        "wires": [
+            [
+                "47cb48ae57c8b2b8"
+            ]
+        ]
+    },
+    {
+        "id": "47cb48ae57c8b2b8",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "36dd16c312c439fd",
+        "name": "Configure Player Call",
+        "func": "let hostIP = env.get(\"HOST_IP\")\nvar url = `http://${hostIP}:48624/v1/playing`\n\nmsg.headers = {}\nmsg.method = \"GET\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 440,
+        "wires": [
+            [
+                "ec31a5275082589f"
+            ]
+        ]
+    },
+    {
+        "id": "ec31a5275082589f",
+        "type": "http request",
+        "z": "f2447a8362bce5f7",
+        "g": "36dd16c312c439fd",
+        "name": "Get Playing Track",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 1130,
+        "y": 440,
+        "wires": [
+            [
+                "7452215585970bb0"
+            ]
+        ]
+    },
+    {
+        "id": "7452215585970bb0",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "615ae58b34e19094",
+        "name": "Configure Track DB Call",
+        "func": "let hostIP = env.get(\"HOST_IP\")\nvar id = msg.payload.data.track.id\nvar url = `http://${hostIP}:48624/v1/track?id=${id}`\n\nmsg.headers = {}\nmsg.method = \"GET\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 440,
+        "wires": [
+            [
+                "812d12d78f61adbd"
+            ]
+        ]
+    },
+    {
+        "id": "812d12d78f61adbd",
+        "type": "http request",
+        "z": "f2447a8362bce5f7",
+        "g": "615ae58b34e19094",
+        "name": "Track DB Info",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 1620,
+        "y": 440,
+        "wires": [
+            [
+                "e0616f35cb6326e4",
+                "0aad7cdc09d4fb45",
+                "f2522183370ce44c"
+            ]
+        ]
+    },
+    {
+        "id": "e0616f35cb6326e4",
+        "type": "change",
+        "z": "f2447a8362bce5f7",
+        "g": "615ae58b34e19094",
+        "name": "All Hotcues",
+        "rules": [
+            {
+                "t": "set",
+                "p": "context.hotcues",
+                "pt": "msg",
+                "to": "payload.data.track.cuepoints",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "response",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 440,
+        "wires": [
+            [
+                "d0be95a753d444ef"
+            ]
+        ]
+    },
+    {
+        "id": "d0be95a753d444ef",
+        "type": "join",
+        "z": "f2447a8362bce5f7",
+        "g": "6f770e2ef7d63043",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2030,
+        "y": 440,
+        "wires": [
+            [
+                "97aabcff572984a5"
+            ]
+        ]
+    },
+    {
+        "id": "97aabcff572984a5",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "6f770e2ef7d63043",
+        "name": "Update Hotcue Info",
+        "func": "//find cuepoint in response\nfor (let index = 0; index < msg.payload.response.data.track.cuepoints.length; index++) {\n    if (msg.payload.response.data.track.cuepoints[index].id == msg.payload.hotcue.id &&\n        msg.payload.response.data.track.id == msg.payload.hotcue.trackId){\n        //replace the current cuepoint with the hotcue\n        msg.payload.response.data.track.cuepoints[index] = msg.payload.hotcue\n    }\n}\n\nmsg.payload = msg.payload.response\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2210,
+        "y": 440,
+        "wires": [
+            [
+                "b1c66761f24ced2e",
+                "619147f7f74cd9d8"
+            ]
+        ]
+    },
+    {
+        "id": "b1c66761f24ced2e",
+        "type": "function",
+        "z": "f2447a8362bce5f7",
+        "g": "6f770e2ef7d63043",
+        "name": "Create Update JSON",
+        "func": "var body = {\n    id: msg.payload.data.track.id,\n        edits: {\n            cuepoints: msg.payload.data.track.cuepoints\n    }\n}\n\nlet hostIP = env.get(\"HOST_IP\")\nvar url = `http://${hostIP}:48624/v1/track`\nmsg.headers = {}\nmsg.method = \"PATCH\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nmsg.payload = body \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2420,
+        "y": 440,
+        "wires": [
+            [
+                "885bf983ba771ce7",
+                "16ef8c2421684707"
+            ]
+        ]
+    },
+    {
+        "id": "16ef8c2421684707",
+        "type": "http request",
+        "z": "f2447a8362bce5f7",
+        "g": "6f770e2ef7d63043",
+        "name": "Update Track In DB",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2650,
+        "y": 440,
+        "wires": [
+            [
+                "de79dda072645a3b",
+                "0f380cfc4b6855be"
+            ]
+        ]
+    },
+    {
+        "id": "cbac6126cf078903",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "File Contents",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2130,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4c5b2fcf53ba302a",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "File Contents",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1810,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4365d4225859a5f3",
+        "type": "debug",
+        "z": "f2447a8362bce5f7",
+        "name": "Atrribs",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2310,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b33717f94a7746f9",
+        "type": "websocket-listener",
+        "path": "/hotcue/update",
+        "wholemsg": "false"
+    },
+    {
+        "id": "95d276e44bdb1ff4",
+        "type": "websocket-listener",
+        "path": "/hotcue/color",
+        "wholemsg": "false"
+    },
+    {
+        "id": "aeb48c1990118d6a",
+        "type": "websocket-listener",
+        "path": "/hotcue/name",
+        "wholemsg": "false"
+    }
+]
