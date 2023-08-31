@@ -14,15 +14,17 @@ If you are feeling adventurous, you can expand on the workflows to further custo
 >- Installing software.
 >- Following directions. 
 
-## Windows or MacOS?
-To simplify the process, the setup is basically the same for both Windows and MacOS users (the two supported platforms for Lexicon.) If you are on Windows and don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here](https://nodered.org/docs/getting-started/windows). Just ignore the "Installing Node-RED" installation instructions below and be sure you have a Node-RED instance running somewhere. 
-
 ## What you will need
 - StreamDeck XL - [https://www.elgato.com/us/en/p/stream-deck-xl](https://www.elgato.com/us/en/p/stream-deck-xl) - You don't necessarily need the XL, it will work on smaller units, but it is really convenient and reduces page changes. 
 - Lexicon Plug-In for StreamDeck - This will get you control options to manipulate Lexicon from your StreamDeck.
 - WebSocket Proxy for StreamDeck - This is the interface from the StreamDeck to Node-RED. 
 - Node-RED - This handles managing inputs from the StreamDeck (read: button pushes) and create the proper message formatting to send to the Lexicon API.
 - Docker - This is the runtime environment for Node-RED. 
+
+## OS Requirements
+The setup has only been tested on Windows 10/11. It may work on a Mac, further testing is needed to determine, specifically, if the WebSocket Proxy for StreamDeck will work on MacOS.
+
+If you don't want to install Docker, you can opt to install NodeJS and Node-RED locally, directions can be found [here](https://nodered.org/docs/getting-started/windows). Just ignore the "Installing Node-RED" installation instructions below and be sure you have a Node-RED instance running somewhere. 
 
 ## Setup Guide
 ### Getting the StreamDeck Ready
