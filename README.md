@@ -30,7 +30,9 @@ To simplify the process, the setup is basically the same for both Windows and Ma
 1. Get your StreamDeck and install the StreamDeck software.
 2. Install the Lexicon Plug-In for StreamDeck. Follow the directions here: [https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54](https://discuss.lexicondj.com/t/controlling-lexicon-from-your-stream-deck/54)
 3. Install the WebSocket Proxy for StreamDeck. Go here - [https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy](https://apps.elgato.com/plugins/org.tynsoe.streamdeck.wsproxy) - and then click "Install".
-4. [***Import the StreamDeck profile***]
+4. Import the StreamDeck profile (recommend starting with Basic):
+   - Basic
+   - Advanced
 
 #### Installing Node-RED
 4. Install Docker:
@@ -49,8 +51,8 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 
 #### Configuring Node-RED
 8. Copy the contents one of the workflows (basic recommended at first):
-   - [./workflows/basic_workflow.json](./workflows/basic_workflow.json)
-   - [./workflows/advanced_workflow.json](./workflows/advanced_workflow.json)
+   - [./workflows/basic/basic_workflow.json](./workflows/basic/basic_workflow.json)
+   - [./workflows/advanced/advanced_workflow.json](./workflows/advanced/advanced_workflow.json)
 9. In your Node-RED Window, click the upper-right hamburger menu and select "Import".
 10. Paste the content of the workflow JSON file into the "Import nodes" window and then click the "Import" button.
 11. Double-click the "Lexicon Hotcue Workflow" tab to open its properties.
