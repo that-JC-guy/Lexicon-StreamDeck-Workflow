@@ -50,6 +50,8 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 ```
    - This will download the Node-RED docker image, start it and setup the internal networking. 
 7. Test if Node-RED is working by opening a web browser to this address - "http://127.0.0.1:1880". If you see the Node-RED page, you are good to continue.
+>[!NOTE]
+>Tips and tricks for managing your Node-RED docker instance can be found at [https://nodered.org/docs/getting-started/docker](https://nodered.org/docs/getting-started/docker)
 
 #### Configuring Node-RED
 8. Copy the contents one of the workflows (basic recommended at first):
@@ -61,12 +63,27 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 12. In the properties, click the "Environment Variables" button.
 13. Change the "HOST_IP" value to your computer's local IP address and then click "Done".
 
-### What have I done so far?
-You have done the 
+## What Now?
+At this point, any changes you need to make will be in the StreamDeck software only. A default set of colors (e.g. "Green". "Violet", etc.) and hotcue names (e.g. "Groove", "Lyrics", etc.) have included in the StreamDeck profile.
 
-## Usage (Basic Workflow)
+To modify a Name in the StreamDeck software, simply click the name and its properties will appear below. The "Title" is the name you see on your StreamDeck, the "id" is the information that is sent when you click the button. The id
+defines how Lexicon names the hotcue. 
+
+Similarly, the colors work the same, but the id of colors should be entered all lower-case.
+
+The first page of the StreamDeck profile sets and removes hotcues and controls some player functions (play/pause, skip forward/backward, etc.) You can also skip around the song using the "<1 M", "> 1M","< 16M", and "> 16M" buttons, moving 1 measure and 16 measure respectively. 
+
+The second page of the StreamDeck profile updates the hotcues once set. It will not update a hotcue that doesn't already exist. 
+
+## Usage
+### Setting a hotcue
+With the song you want to update loaded into the Lexicon player and playing, when you reach a point where you want to set a hotcue, simply click the "Hotcue #" button within one-half beat of the point you want it set. Once set, this will also allow you to jump to that hotcue as well.
+
+### Deleteing a hotcue
+With the song you want to update loaded into the Lexicon player, simply press the "Delete Hotcue #" you want to delete.
+
 ### Updating a hotcue
-On the StreamDeck:
+With the song you want to update loaded into the Lexicon player, on the StreamDeck:
    - Press color key (e.g. orange)
    - Press label key (e.g. Drop)
    - Press Update Hotcue #
@@ -77,8 +94,5 @@ On the StreamDeck:
 >If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
 >To check this, and "Invalid color sent" message will be in the Node-RED debug log along with a list of valid colors will be displayed.
  
->[!NOTE]
->Tips and tricks for managing your Node-RED docker instance can be found at [https://nodered.org/docs/getting-started/docker](https://nodered.org/docs/getting-started/docker)
-
 
 
