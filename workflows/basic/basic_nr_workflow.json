@@ -8,7 +8,7 @@
         "env": [
             {
                 "name": "HOST_IP",
-                "value": "10.0.0.235",
+                "value": "[YOUR COMPUTER'S IP ADDRESS]",
                 "type": "str"
             }
         ]
