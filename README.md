@@ -97,7 +97,7 @@ With the song you want to update loaded into the Lexicon player, on the StreamDe
    ```
 >[!NOTE]
 >If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
->To check this, and "Invalid color sent" message will be in the Node-RED debug log along with a list of valid colors.
+>If this happens, an "Invalid color sent" message will be displayed in the Node-RED debug log along with a list of valid colors.
  
 ## Future Enhancements
 All enhancements will initially be put into the Advanced workflows initially, planned enhancements are as follows:
