@@ -114,7 +114,7 @@ With the song you want to update loaded into the Lexicon player, on the StreamDe
 With the song you want to update loaded into the Lexicon player, on the StreamDeck:
    - Select the folder that contains the type of Custom Tag you want to create. 
    - Press the tag name you want to apply.
-   - To remove the tag name, simply press the button again.
+   - To remove the custom tag, simply press that tag's button again.
  
 ## Future Enhancements
 All enhancements will initially be put into the Advanced workflows initially, planned enhancements are as follows:
