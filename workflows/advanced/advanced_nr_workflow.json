@@ -169,6 +169,44 @@
         "h": 82
     },
     {
+        "id": "f650764e5cd5d6ae",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Tag Workflow",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f42cb6858f28c0d7",
+            "45e991c1c7b6e33d",
+            "2ba392ad03723b3e",
+            "51c167f56c927c6b",
+            "181adefd5035bf5c",
+            "910ffde140cf4f69",
+            "f7aa7f1f63828d95",
+            "d5d3af59ba60cb9c",
+            "24b6f38c4401919c",
+            "6c3ac3e24a827e24",
+            "c061e89d5957c355",
+            "5a45a9af78ee1a4e",
+            "09317b1d68d0b28a",
+            "a24105d84afa685e",
+            "e451a71eec76eb16",
+            "41857bcf23135a6a",
+            "7b9551ede587f0b6",
+            "7fb75fe2353bd6fd",
+            "59c6fab70cd6ca90",
+            "02ccc8da806fd20d",
+            "1e040f5058f12703",
+            "e1bfda935a3c9229",
+            "de19730850b48450"
+        ],
+        "x": 34,
+        "y": 779,
+        "w": 2892,
+        "h": 382
+    },
+    {
         "id": "9b853570696a58bc",
         "type": "sd-input",
         "z": "f6f2187d.f17ca8",
@@ -407,7 +445,7 @@
         "z": "f6f2187d.f17ca8",
         "g": "2637f2942bfebe7e",
         "name": "URL For PATCH",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -546,7 +584,7 @@
         "z": "f6f2187d.f17ca8",
         "g": "2637f2942bfebe7e",
         "name": "Original Track Info",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -618,7 +656,7 @@
         "z": "f6f2187d.f17ca8",
         "g": "2637f2942bfebe7e",
         "name": "Full Hotcue Update",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1249,7 +1287,7 @@
         "z": "f6f2187d.f17ca8",
         "g": "2637f2942bfebe7e",
         "name": "Hotcue Info",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1327,11 +1365,12 @@
         "id": "f42cb6858f28c0d7",
         "type": "websocket in",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "",
         "server": "4aed65781d926036",
         "client": "",
         "x": 120,
-        "y": 1040,
+        "y": 960,
         "wires": [
             [
                 "45e991c1c7b6e33d"
@@ -1342,9 +1381,10 @@
         "id": "45e991c1c7b6e33d",
         "type": "sd-input",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Stream Deck In",
         "x": 300,
-        "y": 1040,
+        "y": 960,
         "wires": [
             [
                 "2ba392ad03723b3e"
@@ -1355,6 +1395,7 @@
         "id": "2ba392ad03723b3e",
         "type": "switch",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Key Down",
         "property": "payload.event",
         "propertyType": "msg",
@@ -1369,7 +1410,7 @@
         "repair": false,
         "outputs": 1,
         "x": 470,
-        "y": 1040,
+        "y": 960,
         "wires": [
             [
                 "51c167f56c927c6b"
@@ -1380,6 +1421,7 @@
         "id": "51c167f56c927c6b",
         "type": "change",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Get Tag Name",
         "rules": [
             {
@@ -1396,7 +1438,7 @@
         "to": "",
         "reg": false,
         "x": 660,
-        "y": 1040,
+        "y": 960,
         "wires": [
             [
                 "181adefd5035bf5c",
@@ -1409,6 +1451,7 @@
         "id": "181adefd5035bf5c",
         "type": "function",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Configure Player Call",
         "func": "let hostIP = env.get(\"HOST_IP\")\nvar url = `http://${hostIP}:48624/v1/playing`\n\nmsg.headers = {}\nmsg.method = \"GET\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nreturn msg;",
         "outputs": 1,
@@ -1417,7 +1460,7 @@
         "finalize": "",
         "libs": [],
         "x": 900,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "910ffde140cf4f69"
@@ -1428,6 +1471,7 @@
         "id": "910ffde140cf4f69",
         "type": "http request",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Get Playing Track",
         "method": "use",
         "ret": "obj",
@@ -1448,7 +1492,7 @@
             }
         ],
         "x": 1110,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "e451a71eec76eb16",
@@ -1460,6 +1504,7 @@
         "id": "f7aa7f1f63828d95",
         "type": "function",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Configure Tag List Call",
         "func": "let hostIP = env.get(\"HOST_IP\")\n\nvar url = `http://${hostIP}:48624/v1/tags`\n\nmsg.headers = {}\nmsg.method = \"GET\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nreturn msg;",
         "outputs": 1,
@@ -1468,7 +1513,7 @@
         "finalize": "",
         "libs": [],
         "x": 900,
-        "y": 1300,
+        "y": 1020,
         "wires": [
             [
                 "d5d3af59ba60cb9c"
@@ -1479,6 +1524,7 @@
         "id": "d5d3af59ba60cb9c",
         "type": "http request",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Get Tag List",
         "method": "use",
         "ret": "obj",
@@ -1499,7 +1545,7 @@
             }
         ],
         "x": 1110,
-        "y": 1300,
+        "y": 1020,
         "wires": [
             [
                 "c061e89d5957c355",
@@ -1511,6 +1557,7 @@
         "id": "24b6f38c4401919c",
         "type": "change",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Get Track Tags",
         "rules": [
             {
@@ -1534,7 +1581,7 @@
         "to": "",
         "reg": false,
         "x": 1740,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "6c3ac3e24a827e24"
@@ -1545,6 +1592,7 @@
         "id": "6c3ac3e24a827e24",
         "type": "join",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "",
         "mode": "custom",
         "build": "object",
@@ -1562,7 +1610,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 2010,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "7fb75fe2353bd6fd",
@@ -1574,6 +1622,7 @@
         "id": "c061e89d5957c355",
         "type": "function",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Get Tag ID",
         "func": "var allTags = msg.payload.data.tags\n\nallTags.forEach(checkTag)\n\nfunction checkTag(item, index,arr){\n    tagsearch: if (arr[index].label == msg.context.tag.name) {\n        // node.warn(item)\n        msg.payload = arr[index].id\n        msg.topic = \"id\"\n        break tagsearch\n    }\n}\n\nreturn msg;",
         "outputs": 1,
@@ -1582,7 +1631,7 @@
         "finalize": "",
         "libs": [],
         "x": 1310,
-        "y": 1300,
+        "y": 1020,
         "wires": [
             [
                 "6c3ac3e24a827e24",
@@ -1594,6 +1643,7 @@
         "id": "5a45a9af78ee1a4e",
         "type": "function",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Add/Remove Tag",
         "func": "//find tag in response\nvar tagFound = false\nfor (let index = 0; index < msg.payload.response.data.track.tags.length; index++) {\n    tagstatus: if (msg.payload.response.data.track.tags[index] == Number(msg.payload.id)){\n        //tag found\n        tagFound = true\n        // node.warn('Original Tags: ' + msg.payload.response.data.track.tags)\n        // node.warn('Tag Found, Deleting: ' + msg.payload.id)\n        var indexToRemove = index;\n        var numberToRemove = 1;\n\n        msg.payload.response.data.track.tags.splice(indexToRemove, numberToRemove);\n        // node.warn('New Tags: ' + msg.payload.response.data.track.tags)\n        break tagstatus\n    }\n}\n\nif (tagFound == false){\n    // node.warn('Original Tags: ' + msg.payload.response.data.track.tags)\n    // node.warn(\"Going to add it\")\n    msg.payload.response.data.track.tags.push(Number(msg.payload.id))\n    msg.payload.response.data.track.tags.sort(function (a, b) {\n        return a - b;\n    })\n    // node.warn('New Tags: ' + msg.payload.response.data.track.tags)\n}\n\n// node.warn(msg.payload)\nmsg.payload = msg.payload.response\n\nreturn msg;",
         "outputs": 1,
@@ -1602,7 +1652,7 @@
         "finalize": "",
         "libs": [],
         "x": 2190,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "59c6fab70cd6ca90"
@@ -1613,17 +1663,19 @@
         "id": "09317b1d68d0b28a",
         "type": "websocket out",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "",
         "server": "4aed65781d926036",
         "client": "",
         "x": 2840,
-        "y": 1000,
+        "y": 920,
         "wires": []
     },
     {
         "id": "a24105d84afa685e",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Sent Tag Name",
         "active": false,
         "tosidebar": true,
@@ -1634,13 +1686,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 880,
-        "y": 900,
+        "y": 820,
         "wires": []
     },
     {
         "id": "e451a71eec76eb16",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Playing Track",
         "active": false,
         "tosidebar": true,
@@ -1651,13 +1704,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1340,
-        "y": 900,
+        "y": 820,
         "wires": []
     },
     {
         "id": "41857bcf23135a6a",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Full Tag List",
         "active": false,
         "tosidebar": true,
@@ -1668,13 +1722,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1370,
-        "y": 1400,
+        "y": 1120,
         "wires": []
     },
     {
         "id": "7b9551ede587f0b6",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Tag ID",
         "active": false,
         "tosidebar": true,
@@ -1685,13 +1740,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1590,
-        "y": 1400,
+        "y": 1120,
         "wires": []
     },
     {
         "id": "7fb75fe2353bd6fd",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Join Result",
         "active": false,
         "tosidebar": true,
@@ -1702,13 +1758,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2230,
-        "y": 900,
+        "y": 820,
         "wires": []
     },
     {
         "id": "59c6fab70cd6ca90",
         "type": "function",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Create Update JSON",
         "func": "var body = {\n    id: msg.payload.data.track.id,\n        edits: {\n            tags: msg.payload.data.track.tags\n    }\n}\n\nlet hostIP = env.get(\"HOST_IP\")\nvar url = `http://${hostIP}:48624/v1/track`\nmsg.headers = {}\nmsg.method = \"PATCH\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nmsg.payload = body \n\nreturn msg;",
         "outputs": 1,
@@ -1717,7 +1774,7 @@
         "finalize": "",
         "libs": [],
         "x": 2420,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "02ccc8da806fd20d",
@@ -1729,6 +1786,7 @@
         "id": "02ccc8da806fd20d",
         "type": "http request",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Update Track In DB",
         "method": "use",
         "ret": "txt",
@@ -1742,7 +1800,7 @@
         "senderr": false,
         "headers": [],
         "x": 2650,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "09317b1d68d0b28a"
@@ -1753,6 +1811,7 @@
         "id": "1e040f5058f12703",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Update Body",
         "active": false,
         "tosidebar": true,
@@ -1763,7 +1822,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2770,
-        "y": 920,
+        "y": 840,
         "wires": []
     },
     {
@@ -1787,6 +1846,7 @@
         "id": "e1bfda935a3c9229",
         "type": "function",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Configure Track DB Call",
         "func": "let hostIP = env.get(\"HOST_IP\")\nvar id = msg.payload.data.track.id\nvar url = `http://${hostIP}:48624/v1/track?id=${id}`\n\nmsg.headers = {}\nmsg.method = \"GET\"\nmsg.url = url\nmsg.headers[\"content-type\"] = \"application/json\"\n\nreturn msg;",
         "outputs": 1,
@@ -1795,7 +1855,7 @@
         "finalize": "",
         "libs": [],
         "x": 1350,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "de19730850b48450"
@@ -1806,6 +1866,7 @@
         "id": "de19730850b48450",
         "type": "http request",
         "z": "f6f2187d.f17ca8",
+        "g": "f650764e5cd5d6ae",
         "name": "Track DB Info",
         "method": "use",
         "ret": "obj",
@@ -1826,7 +1887,7 @@
             }
         ],
         "x": 1560,
-        "y": 1000,
+        "y": 920,
         "wires": [
             [
                 "24b6f38c4401919c"
