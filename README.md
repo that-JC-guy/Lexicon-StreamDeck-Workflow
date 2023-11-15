@@ -95,6 +95,10 @@ With the song you want to update loaded into the Lexicon player, on the StreamDe
    ```
    To set hotcue 1 as orange with a "Drop" label -> Press "Orange", Press "Drop", Press "Update Hotcue 1".
    ```
+>[!NOTE]
+>If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
+>If this happens, an "Invalid color sent" message will be displayed in the Node-RED debug log along with a list of valid colors.
+
 ## For the Leixcon Advanced Workflow StreamDeck Profile Only
 ### Updating energy and rating (Streamdeck Page 3)
 With the song you want to update loaded into the Lexicon player, on the StreamDeck:
@@ -109,10 +113,8 @@ With the song you want to update loaded into the Lexicon player, on the StreamDe
 
 With the song you want to update loaded into the Lexicon player, on the StreamDeck:
    - Select the folder that contains the type of Custom Tag you want to create. 
-   - Press the desired energy value (1 through 10)
->[!NOTE]
->If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
->If this happens, an "Invalid color sent" message will be displayed in the Node-RED debug log along with a list of valid colors.
+   - Press the tag name you want to apply.
+   - To remove the tag name, simply press the button again.
  
 ## Future Enhancements
 All enhancements will initially be put into the Advanced workflows initially, planned enhancements are as follows:
