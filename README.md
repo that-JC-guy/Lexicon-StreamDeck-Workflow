@@ -58,7 +58,7 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 ### Configuring Node-RED
 8. Copy the contents one of the workflows (basic recommended at first):
    - [basic_nr_workflow.json](./workflows/basic/basic_nr_workflow.json)
-   - [advanced_nr_workflow.json](https://drive.google.com/file/d/1Cj8P0sI-HrtbgJUATrxQExLy_THjoxFS/view?usp=drive_link)
+   - [advanced_nr_workflow.json](./workflows/advanced/advanced_nr_workflow.json)
 9. In your Node-RED Window, click the upper-right hamburger menu and select "Import".
 10. Paste the content of the workflow JSON file into the "Import nodes" window and then click the "Import" button.
 11. Double-click the "Lexicon Hotcue Workflow" tab to open its properties.
