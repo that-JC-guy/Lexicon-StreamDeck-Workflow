@@ -109,7 +109,7 @@ With the song you want to update loaded into the Lexicon player, on the StreamDe
 >[!IMPORTANT]
 >If a specified Custom Tag with that name does not exist in Lexicon, the button press will do nothing.  The Custom Tag must exist in Lexicon.
 >It is important that your tag names match EXACTLY in the "id" field of the StreamDeck button. You can replace any button's name and id with your own custom tags in the StreamDeck software.
->If the "id" field does not match with a Lexicon Custom Tag, the button press have no effect in Lexicon.
+>If the "id" field does not match with a Lexicon Custom Tag, the button press has no effect in Lexicon.
 
 With the song you want to update loaded into the Lexicon player, on the StreamDeck:
    - Select the folder that contains the type of Custom Tag you want to create. 
