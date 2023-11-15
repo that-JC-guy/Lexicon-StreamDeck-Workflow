@@ -34,7 +34,7 @@ If you don't want to install Docker, you can opt to install NodeJS and Node-RED 
 5. The profiles listed below use the "Neon Grid" icon library. To install the Neon grid icon libray, follow the instructions at [https://help.elgato.com/hc/en-us/articles/4402426848013-Elgato-Stream-Deck-Using-Icon-packs](https://help.elgato.com/hc/en-us/articles/4402426848013-Elgato-Stream-Deck-Using-Icon-packs).
 6. Download the StreamDeck profile  from the links below (recommend starting with Basic):
    - [Lexicon Basic Workflow.streamDeckProfile](./workflows/basic/Lexicon%20Basic%20Workflow.streamDeckProfile)
-   - [Lexicon Advanced Workflow.streamDeckProfile](./workflows/advanced/Lexicon%20Advanced%20Workflow.streamDeckProfile)
+   - [Lexicon Advanced Workflow.streamDeckProfile](https://drive.google.com/file/d/1Cj8P0sI-HrtbgJUATrxQExLy_THjoxFS/view?usp=drive_link)
 7. Import the StreamDeck profile you downloaded by clicking the gear icon go to the "Profiles" tab, click the down arrow under the list of profiles and select "Import..."
 8. Browse to the StreamDeck profile you downloaded and click "Open"
 
@@ -57,8 +57,8 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 
 ### Configuring Node-RED
 8. Copy the contents one of the workflows (basic recommended at first):
-   - [./workflows/basic/basic_nr_workflow.json](./workflows/basic/basic_nr_workflow.json)
-   - [./workflows/advanced/advanced_nr_workflow.json](./workflows/advanced/advanced_nr_workflow.json)
+   - [basic_nr_workflow.json](./workflows/basic/basic_nr_workflow.json)
+   - [advanced_nr_workflow.json](https://drive.google.com/file/d/1Cj8P0sI-HrtbgJUATrxQExLy_THjoxFS/view?usp=drive_link)
 9. In your Node-RED Window, click the upper-right hamburger menu and select "Import".
 10. Paste the content of the workflow JSON file into the "Import nodes" window and then click the "Import" button.
 11. Double-click the "Lexicon Hotcue Workflow" tab to open its properties.
@@ -81,13 +81,13 @@ The first page of the StreamDeck profile sets and removes hotcues and controls s
 The second page of the StreamDeck profile updates the hotcues once set. It will not update a hotcue that doesn't already exist. Again, you can control the player from the bottom row of buttons. 
 
 ## Basic Usage
-### Setting a hotcue
+### Setting a hotcue (Streamdeck Page 1)
 With the song you want to update loaded into the Lexicon player and playing, when you reach a point where you want to set a hotcue, simply click the "Hotcue #" button within one-half beat of the point you want it set. Once set, this will also allow you to jump to that hotcue as well.
 
 ### Deleteing a hotcue
 With the song you want to update loaded into the Lexicon player, simply press the "Delete Hotcue #" you want to delete.
 
-### Updating a hotcue
+### Updating a hotcue (Streamdeck Page 2)
 With the song you want to update loaded into the Lexicon player, on the StreamDeck:
    - Press color key (e.g. orange)
    - Press label key (e.g. Drop)
@@ -95,13 +95,28 @@ With the song you want to update loaded into the Lexicon player, on the StreamDe
    ```
    To set hotcue 1 as orange with a "Drop" label -> Press "Orange", Press "Drop", Press "Update Hotcue 1".
    ```
+## For the Leixcon Advanced Workflow StreamDeck Profile Only
+### Updating energy and rating (Streamdeck Page 3)
+With the song you want to update loaded into the Lexicon player, on the StreamDeck:
+   - Press the desired rating key (1 through 5)
+   - Press the desired energy value (1 through 10)
+
+### Updating custom tags (Streamdeck Page 4)
+>[!IMPORTANT]
+>If a specified Custom Tag with that name does not exist in Lexicon, the button press will do nothing.  The Custom Tag must exist in Lexicon.
+>It is important that your tag names match EXACTLY in the "id" field of the StreamDeck button. You can replace any button's name and id with your own custom tags in the StreamDeck software.
+>If the "id" field does not match with a Lexicon Custom Tag, the button press have no effect in Lexicon.
+
+With the song you want to update loaded into the Lexicon player, on the StreamDeck:
+   - Select the folder that contains the type of Custom Tag you want to create. 
+   - Press the desired energy value (1 through 10)
 >[!NOTE]
 >If your hotcue selection only shows up as the color black, you likely are setting an invalid color in that color's id in StreamDeck.
 >If this happens, an "Invalid color sent" message will be displayed in the Node-RED debug log along with a list of valid colors.
  
 ## Future Enhancements
 All enhancements will initially be put into the Advanced workflows initially, planned enhancements are as follows:
-- Adding tagging capabilities.
-- Updating track ratings and energy.
-- Adding looping functionality to hotcues. 
+- Adding tagging capabilities - COMPLETED IN THE ADVANCED WORKFLOW
+- Updating track ratings and energy - COMPLETED IN THE ADVANCED WORKFLOW
+- Adding looping functionality to hotcues - IN PROGRESS
 
